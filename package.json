@@ -8,8 +8,14 @@
       "extends": [
         "config:base"
       ],
+      "automerge": true,
+      "automergeType": "branch",
+      "rebaseStalePrs": true,
       "packageRules": [
         {
+          "packagePatterns": [
+            "*"
+          ],
           "automerge": true,
           "automergeType": "branch",
           "depTypeList": [
@@ -45,6 +51,8 @@
   },
   "prettier": "@arbetsmyra/prettier-config",
   "renovate": {
-    "extends": ["@arbetsmyra"]
+    "extends": [
+      "@arbetsmyra"
+    ]
   }
 }
