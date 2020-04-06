@@ -1,6 +1,6 @@
 {
   "name": "@arbetsmyra/renovate-config",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Arbetsmyra's Renovate config",
   "renovate-config": {
     "default": {
