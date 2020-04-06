@@ -2,9 +2,27 @@
   "name": "@arbetsmyra/renovate-config",
   "version": "0.0.1",
   "description": "Arbetsmyra's Renovate config",
-  "main": "renovate-config.js",
+  "renovate-config": {
+    "default": {
+      "description": "Arbetsmyra's Renovate config",
+      "extends": [
+        "config:base"
+      ],
+      "packageRules": [
+        {
+          "automerge": true,
+          "automergeType": "branch",
+          "depTypeList": [
+            "devDependencies"
+          ]
+        }
+      ]
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prettier:check": "prettier --check .",
+    "prettier:write": "prettier --write .",
+    "test": "npm run prettier:check"
   },
   "repository": {
     "type": "git",
@@ -20,5 +38,10 @@
   "bugs": {
     "url": "https://github.com/arbetsmyra/renovate-config/issues"
   },
-  "homepage": "https://github.com/arbetsmyra/renovate-config#readme"
+  "homepage": "https://github.com/arbetsmyra/renovate-config#readme",
+  "devDependencies": {
+    "@arbetsmyra/prettier-config": "^1.0.0",
+    "prettier": "^2.0.4"
+  },
+  "prettier": "@arbetsmyra/prettier-config"
 }
