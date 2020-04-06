@@ -1,0 +1,24 @@
+{
+  "name": "@arbetsmyra/renovate-config",
+  "version": "0.0.1",
+  "description": "Arbetsmyra's Renovate config",
+  "main": "renovate-config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbetsmyra/renovate-config.git"
+  },
+  "keywords": [
+    "renovate",
+    "renovate-config",
+    "arbetsmyra"
+  ],
+  "author": "Anthon <anthon.kendel@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arbetsmyra/renovate-config/issues"
+  },
+  "homepage": "https://github.com/arbetsmyra/renovate-config#readme"
+}
