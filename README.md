@@ -14,7 +14,7 @@ Arbetsmyra's Renovate config
 
 ## Usage
 
-Once the `@arbetsmyra/renovate-config` package is installed, you can use it by specifying the `@arbetsmyra/renovate-config` config for the [`renovate`](https://docs.renovatebot.com/configuration-options/) property in the package.json.
+There should be no need for installing the `@arbetsmyra/renovate-config` config, you can use it by specifying the `@arbetsmyra/renovate-config` config for the [`renovate`](https://docs.renovatebot.com/configuration-options/) property in the package.json.
 
 ```json
 {
