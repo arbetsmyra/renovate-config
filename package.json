@@ -6,13 +6,21 @@
     "default": {
       "description": "Arbetsmyra's Renovate config",
       "extends": [
-        "config:base"
-      ],
-      "automerge": true,
-      "automergeType": "branch",
-      "major": {
-        "automerge": false
-      }
+        "config:base",
+        ":pinAllExceptPeerDependencies",
+        ":separateMajorReleases",
+        ":rebaseStalePrs",
+        ":prImmediately",
+        ":prHourlyLimitNone",
+        ":prConcurrentLimit20",
+        ":automergeDigest",
+        ":automergePatch",
+        ":automergeMinor",
+        ":automergeBranch",
+        ":automergeRequireAllStatusChecks",
+        ":respectLatest",
+        ":npm"
+      ]
     }
   },
   "scripts": {
