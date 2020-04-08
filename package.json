@@ -17,7 +17,6 @@
         ":automergePatch",
         ":automergeMinor",
         ":automergeBranch",
-        ":automergeRequireAllStatusChecks",
         ":respectLatest",
         ":npm"
       ]
