@@ -25,7 +25,10 @@
   "scripts": {
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
-    "test": "npm run prettier:check"
+    "lint:fix": "npm run prettier:write",
+    "lint": "npm run prettier:check",
+    "test": "npm run lint",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
@@ -43,13 +46,35 @@
   },
   "homepage": "https://github.com/arbetsmyra/renovate-config#readme",
   "devDependencies": {
-    "@arbetsmyra/prettier-config": "1.1.0",
-    "prettier": "2.0.5"
+    "@arbetsmyra/commitlint-config": "^1.1.0",
+    "@arbetsmyra/prettier-config": "^1.1.0",
+    "@commitlint/cli": "^8.3.5",
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5"
   },
   "prettier": "@arbetsmyra/prettier-config",
+  "commitlint": {
+    "extends": [
+      "@arbetsmyra"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run lint:fix"
+    }
+  },
   "renovate": {
     "extends": [
       "@arbetsmyra"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "release": {
+    "extends": [
+      "./semantic-release-config.js"
     ]
   }
 }
