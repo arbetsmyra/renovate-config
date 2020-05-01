@@ -48,6 +48,7 @@
   "devDependencies": {
     "@arbetsmyra/commitlint-config": "^1.1.0",
     "@arbetsmyra/prettier-config": "^1.1.0",
+    "@arbetsmyra/semantic-release-config": "^1.0.2",
     "@commitlint/cli": "^8.3.5",
     "husky": "^4.2.5",
     "prettier": "^2.0.5"
@@ -74,7 +75,7 @@
   },
   "release": {
     "extends": [
-      "./semantic-release-config.js"
+      "@arbetsmyra/semantic-release-config"
     ]
   }
 }
